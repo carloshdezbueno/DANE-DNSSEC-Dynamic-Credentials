@@ -1,0 +1,1 @@
+cd ./coredns-tf && terraform init && terraform apply -auto-approve && cd ../ephimeral && terraform init && terraform apply -auto-approve

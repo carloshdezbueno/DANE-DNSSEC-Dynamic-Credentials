@@ -1,0 +1,6 @@
+curl -X POST   -H "Content-Type: application/json"   -d '{"domain": "hogehoge.hoge", "record_name": "test5", "ip_address": "127.0.0.4", "ipv6_address": "::2", "txt_data": "Some text data", "tlsa_data": "3 1 1 7b057553604e1ebd5e7a94236d3ab7265d44a49e55093764e581ec62683e7a29" }'   http://34.175.147.110:5000/add_record
+
+curl -X DELETE http://34.175.147.110:5000/delete_record/test5
+
+
+dig +dnssec @34.175.125.66 -p 1053 cc5131ac04.hogehoge.hoge TLSA
